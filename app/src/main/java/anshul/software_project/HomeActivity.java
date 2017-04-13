@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         final ImageView image = (ImageView) findViewById(R.id.image_logo);
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         image.startAnimation(animation);
 
 

@@ -4,23 +4,24 @@
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fde9e9"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    android:background="#FFFFFF"
+    android:weightSum="1"
     tools:context="anshul.software_project.HomeActivity">
 
     <ImageView
         android:id="@+id/image_logo"
-        android:src="@drawable/app_logo"
-        android:scaleType="fitXY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_logo" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -30,12 +31,12 @@
             android:id="@+id/username_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="32dp"
             android:hint="UserName"
             android:inputType="textEmailAddress"
             android:textColor="@android:color/holo_red_light"
-            android:textColorHint="@android:color/white" />
+            android:textColorHint="@android:color/holo_red_light" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -45,12 +46,12 @@
 
         <EditText
             android:id="@+id/password_field"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20sp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:textColor="@android:color/holo_red_light"
-            android:layout_marginTop="20sp"
-            android:layout_height="40dp"/>
+            android:textColor="@android:color/holo_red_light" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -61,7 +62,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password_field"
         android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:layout_marginTop="20sp"
+        android:background="#fde9e9"
         android:onClick="openDonorList"
         android:text="LOGIN"
         android:textSize="22sp" />
@@ -73,8 +76,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="100dp"
-        android:background="#FFFFFF"
+        android:background="#fde9e9"
         android:onClick="openCreateList"
         android:text="Register"
         android:textSize="22sp" />
+
 </LinearLayout>

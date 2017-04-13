@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Blood Bank</string>
-
+    <string name="demo_collection">Demo Collection</string>
+    <string name="demo_external_activity">Demo External activity</string>
     <string-array name="blood_array">
         <item>AB-</item>
         <item>AB+</item>

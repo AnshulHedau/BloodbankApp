@@ -3,5 +3,5 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="tan_background">#FFF7DA</color>
+    <color name="tan_background">#fff7da</color>
 </resources>

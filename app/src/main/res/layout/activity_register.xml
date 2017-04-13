@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fde9e9"
     android:orientation="vertical"
     tools:context="anshul.software_project.RegisterActivity">
 
@@ -11,15 +12,21 @@
         android:id="@+id/Button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_margin="32dp"
         android:layout_weight="1"
-        android:text="Doner Registration" />
+        android:background="@android:color/holo_red_light"
+        android:text="Doner Registration"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/Button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_margin="32dp"
         android:layout_weight="1"
-        android:text="Blood Bank Registration" />
+        android:background="@android:color/holo_red_light"
+        android:text="Blood Bank Registration"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp" />
 </LinearLayout>
