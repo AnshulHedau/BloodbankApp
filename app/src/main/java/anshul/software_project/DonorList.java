@@ -1,15 +1,18 @@
 package anshul.software_project;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -37,7 +40,8 @@ public class DonorList extends AppCompatActivity {
     public JSONArray search_results_array;
     public Button submit;
     public ListView donor_list;
-    public ArrayList<String> search_results = new ArrayList<String>();
+    public ArrayList<String> search_names = new ArrayList<String>();
+    public ArrayList<String> search_location = new ArrayList<String>();
     public ArrayAdapter<String> adapter;
 
     @Override
@@ -64,7 +68,8 @@ public class DonorList extends AppCompatActivity {
 
         //Getting the ListView from the XML File & showing the details on the ListView
         donor_list = (ListView) findViewById(R.id.donor_results);
-        search_results.clear();
+        search_names.clear();
+        search_location.clear();
 
         //The URL to which GET request is sent
         String SEARCH_URL = ("http://dheerajprojects.gear.host/web_server.php?bloodtype='" + Uri.encode(blood_type) + "'");
@@ -80,12 +85,13 @@ public class DonorList extends AppCompatActivity {
 
                             //Looping through the entire JSON array to get all the values
                             for(int i = 0;i < search_results_array.length(); i++) {
-                                Log.i("custom", search_results_array.get(i).toString());
-                                search_results.add(((JSONObject)search_results_array.get(i)).getString("Name"));
+//                                Log.i("custom", search_results_array.get(i).toString());
+                                search_names.add(((JSONObject)search_results_array.get(i)).getString("Name"));
+                                search_location.add(((JSONObject)search_results_array.get(i)).getString("Location"));
                             }
 
                             //Use <Actvity Name>.this in case of ASync task such as Volley
-                            adapter = new ArrayAdapter<String>(DonorList.this, android.R.layout.simple_list_item_1, android.R.id.text1, search_results);
+                            adapter = new CustomList(DonorList.this, search_location, search_names);
 
                             donor_list.setAdapter(adapter);
                         }
@@ -107,6 +113,18 @@ public class DonorList extends AppCompatActivity {
         //Add the server request to the queue
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+
+        //List onCLick Listener
+        donor_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + parent.getItemAtPosition(position));
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+//                Log.i("map_location", (String)parent.getItemAtPosition(position));
+            }
+        });
 
         //Disable the button until further activity
         submit.setEnabled(false);
