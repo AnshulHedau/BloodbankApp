@@ -1,45 +1,43 @@
 package anshul.software_project;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.os.CountDownTimer;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 5000;
-    protected ImageView animationImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final ImageView image = (ImageView) findViewById(R.id.imageView3);
+        final Intent i = new Intent(this, HomeActivity.class);
 
-        /*AnimationDrawable animationDrawable = (AnimationDrawable) animationImage.getDrawable();
-        animationDrawable.start();
+        new CountDownTimer(4500,150) {
+            int j = 1;
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
             @Override
-            public void run() {
-                startActivity(new Intent(MainActivity.this,HomeActivity.class));
-                finish();
+            public void onTick(long millisUntilFinished) {
+
+                if(j <= 9) {
+                    image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("_0" + j, "drawable", getPackageName())));
+                }
+
+                else{
+                    image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("_" + j, "drawable", getPackageName())));
+                }
+
+                j++;
+                Log.i("custom",""+j);
             }
-        }, 2000);*/
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
-        image.startAnimation(animation);
-        new Handler().postDelayed(new Runnable() {
+
             @Override
-            public void run() {
-                Intent i = new Intent(MainActivity.this,HomeActivity.class);
+            public void onFinish() {
                 startActivity(i);
-                finish();
             }
-        },SPLASH_TIME_OUT);
-
+        }.start();
     }
 }

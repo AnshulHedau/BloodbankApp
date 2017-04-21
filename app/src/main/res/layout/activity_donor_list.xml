@@ -24,8 +24,8 @@
             android:id="@+id/blood_label"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="Select blood type:"
             android:layout_marginLeft="10sp"
+            android:text="Select blood type:"
             android:textSize="18sp" />
 
         <Spinner
@@ -52,8 +52,8 @@
         android:id="@+id/donor_results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="12sp"
-        android:layout_below="@id/search_value">
+        android:layout_below="@id/search_value"
+        android:layout_marginTop="12sp">
 
     </ListView>
 
