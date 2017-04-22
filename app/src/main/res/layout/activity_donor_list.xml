@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_donor_list"
     android:layout_width="match_parent"
@@ -13,47 +13,48 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="anshul.software_project.DonorList">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/search_value"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/blood_label"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12sp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10sp"
             android:text="Select blood type:"
-            android:textSize="22sp" />
+            android:textSize="18sp" />
 
         <Spinner
             android:id="@+id/blood_type_dash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="12sp"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15sp"
             android:layout_toEndOf="@id/blood_label"
             android:layout_toRightOf="@id/blood_label"></Spinner>
 
         <Button
             android:id="@+id/blood_search"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
             android:layout_toEndOf="@id/blood_type_dash"
             android:layout_toRightOf="@id/blood_type_dash"
             android:onClick="searchDonors"
             android:text="GO!" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/donor_results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/search_value">
+        android:layout_below="@id/search_value"
+        android:layout_marginTop="12sp">
 
     </ListView>
 
-</RelativeLayout>
+</LinearLayout>
