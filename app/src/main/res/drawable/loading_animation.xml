@@ -32,4 +32,5 @@
     <item android:drawable="@drawable/_28" android:duration="33"/>
     <item android:drawable="@drawable/_29" android:duration="33"/>
     <item android:drawable="@drawable/_30" android:duration="33"/>
+    <item android:drawable="@drawable/_31" android:duration="33"/>
 </animation-list>
