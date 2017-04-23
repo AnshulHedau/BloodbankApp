@@ -2,6 +2,11 @@
     <string name="app_name">Blood Bank</string>
     <string name="demo_collection">Demo Collection</string>
     <string name="demo_external_activity">Demo External activity</string>
+    <string name="doner_registration">Doner Registration</string>
+    <string name="blood_bank_registration">Blood Bank Registration</string>
+    <string name="registration_portal">Registration Portal</string>
+    <string name="username">UserName</string>
+    <string name="blood_bank">BLOOD BANK</string>
     <string-array name="blood_array">
         <item>AB-</item>
         <item>AB+</item>

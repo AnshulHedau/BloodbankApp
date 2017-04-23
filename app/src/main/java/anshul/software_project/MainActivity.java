@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 startActivity(i);
+                finish();
             }
         }.start();
     }
