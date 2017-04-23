@@ -10,23 +10,25 @@
 
     <Button
         android:id="@+id/Button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
         android:layout_margin="32dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_red_light"
         android:text="Doner Registration"
         android:textColor="@android:color/background_light"
-        android:textSize="32sp" />
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_buttonrounded"/>
 
     <Button
         android:id="@+id/Button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
         android:layout_margin="32dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_red_light"
         android:text="Blood Bank Registration"
         android:textColor="@android:color/background_light"
-        android:textSize="32sp" />
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_buttonrounded"
+        android:textSize="20dp" />
 </LinearLayout>
