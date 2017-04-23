@@ -4,12 +4,12 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
             <corners
-                android:radius="500dp" />
+                android:radius="5dp" />
 
             <gradient
                 android:angle="90"
-                android:startColor="#c900c85a"
-                android:endColor="#caeeefef"
+                android:startColor="#deec695b"
+                android:endColor="#c6eeefef"
                 android:type="linear"
                 android:gradientRadius="80dp"/>
         </shape>
@@ -18,10 +18,10 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
             <corners
-                android:radius="500dp" />
+                android:radius="5dp" />
             <gradient
                 android:angle="90"
-                android:startColor="#06ea6d"
+                android:startColor="#ec222c"
                 android:endColor="#eeefef"
                 android:type="linear"
                 android:gradientRadius="80dp"/>
