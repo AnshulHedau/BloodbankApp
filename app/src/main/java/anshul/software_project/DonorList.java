@@ -1,21 +1,18 @@
 package anshul.software_project;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.app.AlertDialog;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -28,11 +25,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import static android.R.attr.required;
-import static android.R.attr.x;
-import static android.R.id.list;
 
 public class DonorList extends AppCompatActivity {
 
@@ -44,6 +36,7 @@ public class DonorList extends AppCompatActivity {
     public ListView donor_list;
     public ArrayList<String> search_names = new ArrayList<String>();
     public ArrayList<String> search_location = new ArrayList<String>();
+    public ArrayList<String> search_numbers = new ArrayList<String>();
     public ArrayAdapter<String> adapter;
 
     @Override
@@ -72,6 +65,7 @@ public class DonorList extends AppCompatActivity {
         donor_list = (ListView) findViewById(R.id.donor_results);
         search_names.clear();
         search_location.clear();
+        search_numbers.clear();
 
         //The URL to which GET request is sent
         String SEARCH_URL = ("http://dheerajprojects.gear.host/web_server.php?bloodtype='" + Uri.encode(blood_type) + "'");
@@ -90,10 +84,11 @@ public class DonorList extends AppCompatActivity {
 //                                Log.i("custom", search_results_array.get(i).toString());
                                 search_names.add(((JSONObject)search_results_array.get(i)).getString("Name"));
                                 search_location.add(((JSONObject)search_results_array.get(i)).getString("Location"));
+                                search_numbers.add(((JSONObject)search_results_array.get(i)).getString("MobNumber"));
                             }
 
                             //Use <Actvity Name>.this in case of ASync task such as Volley
-                            adapter = new CustomList(DonorList.this, search_location, search_names);
+                            adapter = new CustomList(DonorList.this, search_location, search_names, search_numbers);
 
                             donor_list.setAdapter(adapter);
                         }
@@ -144,8 +139,8 @@ public class DonorList extends AppCompatActivity {
                             try {
                                 Intent callIntent = new Intent(Intent.ACTION_CALL);
 
-                                //Dummy number for calling
-                                callIntent.setData(Uri.parse("tel:7043131141"));
+                                //Get the number for calling & start intent for the call
+                                callIntent.setData(Uri.parse("tel:" + (search_numbers.get(temp_position))));
                                 startActivity(callIntent);
                             }
 
