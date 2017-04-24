@@ -5,7 +5,7 @@
     <string name="doner_registration">Doner Registration</string>
     <string name="blood_bank_registration">Blood Bank Registration</string>
     <string name="registration_portal">Registration Portal</string>
-    <string name="username">UserName</string>
+    <string name="username">Username</string>
     <string name="blood_bank">BLOOD BANK</string>
     <string-array name="blood_array">
         <item>AB-</item>

@@ -132,8 +132,6 @@
 
             </android.support.v7.widget.Toolbar>
 
-
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
