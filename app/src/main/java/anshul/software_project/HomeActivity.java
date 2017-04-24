@@ -92,7 +92,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openCreateList(View view){
-        Intent i = new Intent(this,RegisterActivity.class);
+        Intent i = new Intent(this,DonorRegistration.class);
         startActivity(i);
     }
 }

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageView image = (ImageView) findViewById(R.id.imageView3);
         final Intent i = new Intent(this, HomeActivity.class);
 
-        new CountDownTimer(4500,150) {
+        new CountDownTimer(4650,150) {
             int j = 1;
 
             @Override
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 j++;
-                Log.i("custom",""+j);
             }
 
             @Override

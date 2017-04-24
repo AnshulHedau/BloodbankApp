@@ -18,7 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-public class DonerRegistration extends AppCompatActivity {
+public class DonorRegistration extends AppCompatActivity {
 
     public Button submit;
     public Intent home_page;
@@ -27,13 +27,13 @@ public class DonerRegistration extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doner_registration);
+        setContentView(R.layout.activity_donor_registration);
 
         //Change the title of the screen
-        setTitle("Blood Bank Registration");
+        setTitle("Donor Registration");
 
         //Initialize the spinner
-        Spinner spinner = (Spinner) findViewById(R.id.blood_spinner);
+        spinner = (Spinner) findViewById(R.id.blood_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.blood_array, android.R.layout.simple_spinner_item);
 
@@ -46,9 +46,7 @@ public class DonerRegistration extends AppCompatActivity {
         EditText uname_value = (EditText) findViewById(R.id.editText2);
         EditText pass_value = (EditText) findViewById(R.id.editText3);
         EditText name_value = (EditText) findViewById(R.id.editText4);
-        EditText email_value = (EditText) findViewById(R.id.editText5);
         EditText mobile_value = (EditText) findViewById(R.id.editText6);
-        EditText birth_value = (EditText) findViewById(R.id.editText7);
         EditText aller_value = (EditText) findViewById(R.id.editText10);
         EditText loc_value = (EditText) findViewById(R.id.editText11);
         String blood_type = spinner.getSelectedItem().toString();
@@ -57,10 +55,10 @@ public class DonerRegistration extends AppCompatActivity {
         home_page = new Intent(this,HomeActivity.class);
 
         //The URL to which GET request is sent
-        String REGISTER_URL = ("http://dheerajprojects.gear.host/web_server.php?type='insert'&username='" + uname_value.getText().toString() + "'&password='" + pass_value.getText().toString() + "'&name='" + name_value.getText().toString() + "'&bloodtype='" + Uri.encode(blood_type) + "'&location='" + loc_value.getText().toString() + "'&allergies='" + aller_value.getText().toString() + "'");
+        String REGISTER_URL = ("http://dheerajprojects.gear.host/web_server.php?type='insert'&username='" + uname_value.getText().toString() + "'&password='" + pass_value.getText().toString() + "'&name='" + Uri.encode(name_value.getText().toString()) + "'&bloodtype='" + Uri.encode(blood_type) + "'&mobilenumber='" + mobile_value.getText().toString() + "'&location='" + loc_value.getText().toString() + "'&allergies='" + aller_value.getText().toString() + "'");
 
         //Check if any of the fields are empty
-        if (uname_value.getText().length() == 0 || loc_value.getText().length() == 0 || pass_value.getText().length() == 0 || email_value.getText().length() == 0) {
+        if (uname_value.getText().length() == 0 || loc_value.getText().length() == 0 || name_value.getText().length() == 0  || pass_value.getText().length() == 0 || mobile_value.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "The fields have not been completed!", Toast.LENGTH_SHORT).show();
         }
 

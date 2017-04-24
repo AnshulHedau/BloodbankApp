@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -19,7 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnActivity1 = (Button) findViewById(R.id.Button1);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         btnActivity1.startAnimation(animation);
-        final Intent i = new Intent(this,DonerRegistration.class);
+        final Intent i = new Intent(this,DonorRegistration.class);
 
         btnActivity1.setOnClickListener(new View.OnClickListener(){
             @Override

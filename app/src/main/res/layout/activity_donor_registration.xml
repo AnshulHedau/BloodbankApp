@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:fitsSystemWindows="true"
-    tools:context="anshul.software_project.DonerRegistration">
+    tools:context="anshul.software_project.DonorRegistration">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,8 +21,7 @@
             android:fitsSystemWindows="true"
             app:contentScrim="@color/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="Doner Registration">
-
+            app:title="Donor Registration">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -42,8 +41,6 @@
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -61,9 +58,6 @@
             android:orientation="vertical"
             android:weightSum="1">
 
-            <!--<android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">-->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,7 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:hint="Enter Username" />
+                    android:hint="Username" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -95,7 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:hint="Enter Password" />
+                    android:hint="Password" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -103,14 +97,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                android:background="@drawable/bg_edittext">
+                android:background="@drawable/bg_edittext"
+                android:paddingLeft="10dp">
 
                 <EditText
                     android:id="@+id/editText4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:hint="Enter Name"
+                    android:hint="Name"
                     android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
@@ -119,23 +114,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                android:background="@drawable/bg_edittext">
-
-                <EditText
-                    android:id="@+id/editText5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="Re-Enter Email-ID"
-                    android:inputType="textEmailAddress" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@drawable/bg_edittext">
+                android:background="@drawable/bg_edittext"
+                android:paddingLeft="10dp">
 
                 <EditText
                     android:id="@+id/editText6"
@@ -143,26 +123,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:ems="10"
-                    android:hint="Enter Mobile Number"
+                    android:hint="Mobile Number"
                     android:inputType="number" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@drawable/bg_edittext">
-
-
-                <EditText
-                    android:id="@+id/editText9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="Enter Birth Date"
-                    android:inputType="date" />
-
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -189,7 +151,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/background_light"
-                    android:dropDownWidth="match_parent"></Spinner>
+                    android:dropDownWidth="match_parent">
+
+                </Spinner>
 
             </LinearLayout>
 
@@ -198,7 +162,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                android:background="@drawable/bg_edittext">
+                android:background="@drawable/bg_edittext"
+                android:paddingLeft="10dp">
 
                 <EditText
                     android:id="@+id/editText10"
@@ -228,11 +193,12 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/submit_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Button" />
+                android:onClick="openHome"
+                android:text="REGISTER" />
 
         </LinearLayout>
 

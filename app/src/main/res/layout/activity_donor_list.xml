@@ -44,6 +44,7 @@
             android:layout_toEndOf="@id/blood_type_dash"
             android:layout_toRightOf="@id/blood_type_dash"
             android:onClick="searchDonors"
+            android:textAlignment="center"
             android:text="GO!" />
 
     </LinearLayout>

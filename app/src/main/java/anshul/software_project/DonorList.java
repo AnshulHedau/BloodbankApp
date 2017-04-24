@@ -1,5 +1,6 @@
 package anshul.software_project;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.AlertDialog;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -118,11 +120,42 @@ public class DonorList extends AppCompatActivity {
         donor_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + parent.getItemAtPosition(position));
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
-//                Log.i("map_location", (String)parent.getItemAtPosition(position));
+                //Setting up the alert dialog for selecting GPS/Call function
+                CharSequence colors[] = new CharSequence[] {"Navigate to the donor.", "Call donor."};
+
+                //Build a basic Alert Dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(DonorList.this);
+                builder.setTitle("Pick an option");
+
+                final AdapterView<?> temp_parent = parent;
+                final int temp_position = position;
+
+                builder.setItems(colors, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (which == 0){
+                            Uri gmmIntentUri = Uri.parse("google.navigation:q=" + temp_parent.getItemAtPosition(temp_position));
+                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                            mapIntent.setPackage("com.google.android.apps.maps");
+                            startActivity(mapIntent);
+                        }
+
+                        else{
+                            try {
+                                Intent callIntent = new Intent(Intent.ACTION_CALL);
+
+                                //Dummy number for calling
+                                callIntent.setData(Uri.parse("tel:7043131141"));
+                                startActivity(callIntent);
+                            }
+
+                            catch(SecurityException e){
+                                Toast.makeText(getApplicationContext(),"There is some issue with the permission.",Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    }
+                });
+                builder.show();
             }
         });
 
