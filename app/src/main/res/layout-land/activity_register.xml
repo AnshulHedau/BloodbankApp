@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
-    android:background="@drawable/bg"
+    android:background="@drawable/backgrnd"
     android:orientation="vertical"
     tools:context="anshul.software_project.RegisterActivity">
 
@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:orientation="vertical">
 
         <TextView
@@ -23,22 +22,22 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_weight="1"
             android:lineSpacingExtra="8sp"
-            android:text="@string/registration_portal"
+            android:text="Registration Portal"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/holo_red_dark"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
 
         <Button
             android:id="@+id/Button1"
             android:layout_width="@android:dimen/thumbnail_height"
             android:layout_height="@android:dimen/thumbnail_width"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="40dp"
-            android:layout_weight="2"
+            android:layout_margin="32dp"
+            android:layout_weight="1"
             android:background="@drawable/bg_buttonrounded"
-            android:text="@string/doner_registration"
+            android:text="Doner Registration"
             android:textColor="@android:color/background_light"
             android:textSize="20sp" />
 
@@ -48,11 +47,11 @@
             android:layout_height="@android:dimen/thumbnail_width"
             android:layout_gravity="center_horizontal"
             android:layout_margin="32dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@drawable/bg_buttonrounded"
-            android:text="@string/blood_bank_registration"
+            android:text="Blood Bank Registration"
             android:textColor="@android:color/background_light"
-            android:textSize="20sp" />
+            android:textSize="20dp" />
 
     </LinearLayout>
 
