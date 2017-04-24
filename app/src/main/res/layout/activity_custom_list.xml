@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:layout_height="fill_parent">
 
         <TextView
             android:id="@+id/location"
@@ -15,7 +14,19 @@
             android:id="@+id/main_name"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_below="@id/location"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="22sp"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/mob_number"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/location"
+            android:layout_toEndOf="@id/main_name"
+            android:gravity="right"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="22sp"/>
+        
+</RelativeLayout>
