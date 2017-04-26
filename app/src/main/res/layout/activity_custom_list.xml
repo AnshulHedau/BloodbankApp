@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/bg_edittext"
             android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:srcCompat="@drawable/achievement_heart"
+                    android:layout_marginTop="4dp"
+                    android:layout_alignTop="@+id/location"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_alignParentEnd="true" />
 
                 <TextView
                     android:id="@+id/location"
