@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openDonorList(View view){
-        String username = ((EditText) findViewById(R.id.username_field)).getText().toString();
+        final String username = ((EditText) findViewById(R.id.username_field)).getText().toString();
         String password = ((EditText) findViewById(R.id.password_field)).getText().toString();
         submit = (Button) findViewById(R.id.submit_button);
         new_user = (Button) findViewById(R.id.user_button);
@@ -59,6 +59,7 @@ public class HomeActivity extends AppCompatActivity {
                         public void onResponse(String response) {
                             //Check if the entered password is correct
                             if(response.equals("Success")) {
+                                donor_page.putExtra("Value",username);
                                 startActivity(donor_page);
                                 Toast.makeText(getApplicationContext(), "Welcome!", Toast.LENGTH_LONG).show();
                                  submit.setEnabled(true);
@@ -93,6 +94,11 @@ public class HomeActivity extends AppCompatActivity {
 
     public void openCreateList(View view){
         Intent i = new Intent(this,DonorRegistration.class);
+        startActivity(i);
+    }
+
+    public void openAboutus(View view){
+        Intent i = new Intent(this,AboutUs.class);
         startActivity(i);
     }
 }
