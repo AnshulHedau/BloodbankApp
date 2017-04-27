@@ -50,12 +50,11 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:text="Button"
+        android:text="Donate"
         android:textColor="@color/tan_background"
         android:textSize="18sp" />
 
@@ -63,13 +62,12 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:onClick="goback"
-        android:text="Button"
+        android:text="Go to Home Page"
         android:textColor="@color/tan_background"
         android:textSize="18sp" />
 </LinearLayout>
