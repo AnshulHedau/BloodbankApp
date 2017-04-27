@@ -7,11 +7,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -26,6 +29,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import static android.R.attr.animation;
+
 public class DonorList extends AppCompatActivity {
 
     //Initializing the required variables
@@ -39,11 +44,14 @@ public class DonorList extends AppCompatActivity {
     public ArrayList<String> search_numbers = new ArrayList<String>();
     public ArrayAdapter<String> adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_list);
-
+        String val = getIntent().getExtras().getString("Value");
+        TextView tvusername = (TextView)findViewById(R.id.usernamedisplay);
+        tvusername.setText(val);
         //Change the title of the screen
         setTitle("Dashboard");
 
@@ -54,6 +62,18 @@ public class DonorList extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        /*final Intent i2 = new Intent(this,BloodBankRegistration.class);
+        btnActivity2 = (Button) findViewById(R.id.Button2);
+        Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
+        btnActivity2.startAnimation(animation2);
+        btnActivity2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)    {
+
+                startActivity(i2);
+            }
+        });*/
     }
 
     public void searchDonors(View view){
@@ -158,5 +178,6 @@ public class DonorList extends AppCompatActivity {
         submit.setEnabled(false);
 
     }
+
 
 }
