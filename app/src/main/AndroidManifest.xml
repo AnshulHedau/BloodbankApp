@@ -28,7 +28,9 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".DonorRegistration" />
         <activity android:name=".BloodBankRegistration" />
-        <activity android:name=".CustomList"></activity>
+        <activity android:name=".CustomList" />
+        <activity android:name=".BloodBankSearch" />
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>
