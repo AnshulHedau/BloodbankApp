@@ -55,7 +55,7 @@ public class DonorRegistration extends AppCompatActivity {
         home_page = new Intent(this,HomeActivity.class);
 
         //The URL to which GET request is sent
-        String REGISTER_URL = ("http://dheerajprojects.gear.host/web_server.php?type='insert'&username='" + uname_value.getText().toString() + "'&password='" + pass_value.getText().toString() + "'&name='" + Uri.encode(name_value.getText().toString()) + "'&bloodtype='" + Uri.encode(blood_type) + "'&mobilenumber='" + mobile_value.getText().toString() + "'&location='" + loc_value.getText().toString() + "'&allergies='" + aller_value.getText().toString() + "'");
+        String REGISTER_URL = ("http://dheerajprojects.gear.host/web_server.php?type='insert'&username='" + uname_value.getText().toString() + "'&password='" + pass_value.getText().toString() + "'&name='" + Uri.encode(name_value.getText().toString()) + "'&bloodtype='" + Uri.encode(blood_type) + "'&mobilenumber='" + mobile_value.getText().toString() + "'&location='" + Uri.encode(loc_value.getText().toString()) + "'&allergies='" + aller_value.getText().toString() + "'");
 
         //Check if any of the fields are empty
         if (uname_value.getText().length() == 0 || loc_value.getText().length() == 0 || name_value.getText().length() == 0  || pass_value.getText().length() == 0 || mobile_value.getText().length() == 0) {

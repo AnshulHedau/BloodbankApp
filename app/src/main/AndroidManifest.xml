@@ -30,7 +30,9 @@
         <activity android:name=".BloodBankRegistration" />
         <activity android:name=".CustomList" />
         <activity android:name=".BloodBankSearch" />
-        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".EditProfile"></activity>
     </application>
 
 </manifest>
