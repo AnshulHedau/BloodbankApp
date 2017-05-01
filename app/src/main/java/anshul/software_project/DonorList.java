@@ -49,11 +49,9 @@ public class DonorList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_list);
-        String val = getIntent().getExtras().getString("Value");
-        TextView tvusername = (TextView)findViewById(R.id.usernamedisplay);
-        tvusername.setText(val);
+
         //Change the title of the screen
-        setTitle("Dashboard");
+        setTitle("Donor List");
 
         //Initialize the spinner
         spinner = (Spinner) findViewById(R.id.blood_type_dash);
