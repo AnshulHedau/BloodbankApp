@@ -28,11 +28,12 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".DonorRegistration" />
         <activity android:name=".BloodBankRegistration" />
-        <activity android:name=".CustomList" />
         <activity android:name=".BloodBankSearch" />
         <activity android:name=".AboutUs" />
         <activity android:name=".Dashboard" />
-        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".EditProfile" />
+        <activity android:name=".PayPalReg" />
+        <activity android:name=".Test"></activity>
     </application>
 
 </manifest>
