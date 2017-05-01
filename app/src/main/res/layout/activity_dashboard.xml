@@ -3,40 +3,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical"
+    android:weightSum="1"
     tools:context="anshul.software_project.Dashboard">
 
     <TextView
         android:id="@+id/usernamedisplay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
     <Button
         android:id="@+id/dsearch_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="0.14"
+        android:background="@drawable/search_btn_bg"
         android:onClick="openSearch"
         android:text="SEARCH DONERS" />
 
     <Button
         android:id="@+id/dedit_profile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="0.14"
+        android:background="@drawable/signup_btn_bg"
+        android:elevation="0dp"
         android:onClick="openEditProfile"
+
         android:text="EDIT PROFILE" />
 
     <Button
         android:id="@+id/ddelete_account"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="0.14"
+        android:background="@drawable/login_btn_bg"
+        android:elevation="0dp"
         android:onClick="deleteAccount"
         android:text="DELETE ACCOUNT" />
 
     <Button
         android:id="@+id/dlogout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="0.14"
+        android:background="@drawable/logout_btn_bg"
         android:onClick="userLogout"
         android:text="LOGOUT" />
 
