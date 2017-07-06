@@ -28,7 +28,7 @@
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+        android:text="This is to certify that the project work titled “Blood Bank Android Application” that is being submitted by Valmeekam Karthik,Aman Mangal, Anshul Hedau, Dheeraj Nair for the Software Engeenering(CSE3001) is a record of bona fide work done under supervision of Prabhu S. The contents of this project work, in full or in parts, have neither been taken from any source, nor have been submitted for any other CAL course.  "
         android:textAlignment="center"
         android:textColor="@color/tan_background"
         android:textStyle="bold" />
@@ -41,7 +41,7 @@
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        android:text="We are a no profit host.Hence for the add free and uninterupted service we accepts the donations from the users for this noble cause."
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textStyle="bold" />

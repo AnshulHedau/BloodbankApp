@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password_field"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:layout_weight="0.08"
@@ -98,7 +98,7 @@
         android:textSize="22sp"
         android:onClick="openCreateList"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"/>
 
