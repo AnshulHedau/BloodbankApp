@@ -2,8 +2,8 @@ package anshul.software_project;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -52,17 +52,15 @@ public class DonorRegistration extends AppCompatActivity {
         String blood_type = spinner.getSelectedItem().toString();
         submit = (Button) findViewById(R.id.submit_button);
 
-        home_page = new Intent(this,HomeActivity.class);
+        home_page = new Intent(this, HomeActivity.class);
 
         //The URL to which GET request is sent
         String REGISTER_URL = ("http://dheerajprojects.gear.host/web_server.php?type='insert'&username='" + uname_value.getText().toString() + "'&password='" + pass_value.getText().toString() + "'&name='" + Uri.encode(name_value.getText().toString()) + "'&bloodtype='" + Uri.encode(blood_type) + "'&mobilenumber='" + mobile_value.getText().toString() + "'&location='" + Uri.encode(loc_value.getText().toString()) + "'&allergies='" + aller_value.getText().toString() + "'");
 
         //Check if any of the fields are empty
-        if (uname_value.getText().length() == 0 || loc_value.getText().length() == 0 || name_value.getText().length() == 0  || pass_value.getText().length() == 0 || mobile_value.getText().length() == 0) {
+        if (uname_value.getText().length() == 0 || loc_value.getText().length() == 0 || name_value.getText().length() == 0 || pass_value.getText().length() == 0 || mobile_value.getText().length() == 0) {
             Toast.makeText(getBaseContext(), "The fields have not been completed!", Toast.LENGTH_SHORT).show();
-        }
-
-        else{
+        } else {
             //Contact the server to add the data from the user
             StringRequest stringRequest = new StringRequest(Request.Method.GET, REGISTER_URL,
                     new Response.Listener<String>() {
@@ -75,7 +73,7 @@ public class DonorRegistration extends AppCompatActivity {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(getBaseContext(),error.toString(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), error.toString(), Toast.LENGTH_LONG).show();
                             submit.setEnabled(true);
                         }
                     });

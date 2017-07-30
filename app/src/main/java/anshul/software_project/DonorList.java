@@ -69,7 +69,7 @@ public class DonorList extends AppCompatActivity {
         });*/
     }
 
-    public void searchDonors(View view){
+    public void searchDonors(View view) {
         //Get the blood type from the spinner
         blood_type = spinner.getSelectedItem().toString();
         submit = (Button) findViewById(R.id.blood_search);
@@ -93,20 +93,18 @@ public class DonorList extends AppCompatActivity {
                             submit.setEnabled(true);
 
                             //Looping through the entire JSON array to get all the values
-                            for(int i = 0;i < search_results_array.length(); i++) {
+                            for (int i = 0; i < search_results_array.length(); i++) {
 //                                Log.i("custom", search_results_array.get(i).toString());
-                                search_names.add(((JSONObject)search_results_array.get(i)).getString("Name"));
-                                search_location.add(((JSONObject)search_results_array.get(i)).getString("Location"));
-                                search_numbers.add(((JSONObject)search_results_array.get(i)).getString("MobNumber"));
+                                search_names.add(((JSONObject) search_results_array.get(i)).getString("Name"));
+                                search_location.add(((JSONObject) search_results_array.get(i)).getString("Location"));
+                                search_numbers.add(((JSONObject) search_results_array.get(i)).getString("MobNumber"));
                             }
 
                             //Use <Actvity Name>.this in case of ASync task such as Volley
                             adapter = new CustomList(DonorList.this, search_location, search_names, search_numbers);
 
                             donor_list.setAdapter(adapter);
-                        }
-
-                        catch (Exception e){
+                        } catch (Exception e) {
                             Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
                             submit.setEnabled(true);
                         }
@@ -115,7 +113,7 @@ public class DonorList extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(DonorList.this,error.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(DonorList.this, error.toString(), Toast.LENGTH_LONG).show();
                         submit.setEnabled(true);
                     }
                 });
@@ -129,7 +127,7 @@ public class DonorList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Setting up the alert dialog for selecting GPS/Call function
-                CharSequence options[] = new CharSequence[] {"Navigate to the donor.", "Call donor."};
+                CharSequence options[] = new CharSequence[]{"Navigate to the donor.", "Call donor."};
 
                 //Build a basic Alert Dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(DonorList.this);
@@ -141,24 +139,20 @@ public class DonorList extends AppCompatActivity {
                 builder.setItems(options, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if (which == 0){
+                        if (which == 0) {
                             Uri gmmIntentUri = Uri.parse("google.navigation:q=" + temp_parent.getItemAtPosition(temp_position));
                             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                             mapIntent.setPackage("com.google.android.apps.maps");
                             startActivity(mapIntent);
-                        }
-
-                        else{
+                        } else {
                             try {
                                 Intent callIntent = new Intent(Intent.ACTION_CALL);
 
                                 //Get the number for calling & start intent for the call
                                 callIntent.setData(Uri.parse("tel:" + (search_numbers.get(temp_position))));
                                 startActivity(callIntent);
-                            }
-
-                            catch(SecurityException e){
-                                Toast.makeText(getApplicationContext(),"There is some issue with the permission.",Toast.LENGTH_LONG).show();
+                            } catch (SecurityException e) {
+                                Toast.makeText(getApplicationContext(), "There is some issue with the permission.", Toast.LENGTH_LONG).show();
                             }
                         }
                     }

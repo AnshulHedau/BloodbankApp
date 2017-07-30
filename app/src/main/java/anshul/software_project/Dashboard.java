@@ -1,5 +1,6 @@
 package anshul.software_project;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -8,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.app.AlertDialog;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -52,7 +52,7 @@ public class Dashboard extends AppCompatActivity {
         final String DELETE_URL = ("http://dheerajprojects.gear.host/web_server.php?delete_account&username='" + Uri.encode(Username) + "'");
         final Intent home = new Intent(this, HomeActivity.class);
 
-        CharSequence options[] = new CharSequence[] {"Yes, delete my account.", "No, take me back."};
+        CharSequence options[] = new CharSequence[]{"Yes, delete my account.", "No, take me back."};
 
         //Build a basic Alert Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(Dashboard.this);
@@ -61,7 +61,7 @@ public class Dashboard extends AppCompatActivity {
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (which == 0){
+                if (which == 0) {
                     //Contact the server to add the data from the user
                     StringRequest stringRequest = new StringRequest(Request.Method.GET, DELETE_URL,
                             new Response.Listener<String>() {
@@ -84,9 +84,7 @@ public class Dashboard extends AppCompatActivity {
                     //Add the server request to the queue
                     RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
                     requestQueue.add(stringRequest);
-                }
-
-                else{
+                } else {
                     //Do nothing
                 }
             }

@@ -4,16 +4,14 @@
     <alpha
         android:duration="500"
         android:fromAlpha="0.8"
-        android:toAlpha="1"
         android:fromXScale="1"
         android:fromYScale="1"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:toXScale="1.2"
-        android:toYScale="1.2"
+        android:repeatCount="infinite"
         android:repeatMode="reverse"
-        android:repeatCount="infinite">
-    </alpha>
-</set>
-    <!--android:fromAlpha="0.5"
+        android:toAlpha="1"
+        android:toXScale="1.2"
+        android:toYScale="1.2"></alpha>
+</set><!--android:fromAlpha="0.5"
             android:toAlpha="1"-->

@@ -2,10 +2,9 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/accelerate_interpolator">
     <alpha
+        android:duration="1000"
         android:fromAlpha="0.8"
-        android:toAlpha="1"
-        android:repeatMode="reverse"
         android:repeatCount="infinite"
-        android:duration="1000">
-    </alpha>
+        android:repeatMode="reverse"
+        android:toAlpha="1"></alpha>
 </set>

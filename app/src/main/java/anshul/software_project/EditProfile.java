@@ -67,17 +67,15 @@ public class EditProfile extends AppCompatActivity {
                             ((EditText) findViewById(R.id.loc_field)).setText(location);
                             ((EditText) findViewById(R.id.aller_field)).setText(allergies);
                             ((EditText) findViewById(R.id.mobile_field)).setText(mob_number);
-                        }
-
-                        catch (Exception e){
-                            Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_LONG).show();
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -86,7 +84,7 @@ public class EditProfile extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-    public void ModifyDetails(View view){
+    public void ModifyDetails(View view) {
         pass = ((EditText) findViewById(R.id.pass_field)).getText().toString();
         name = ((EditText) findViewById(R.id.name_field)).getText().toString();
         blood_t = ((EditText) findViewById(R.id.bloodtype_field)).getText().toString();
@@ -94,20 +92,20 @@ public class EditProfile extends AppCompatActivity {
         allergies = ((EditText) findViewById(R.id.aller_field)).getText().toString();
         mob_number = ((EditText) findViewById(R.id.mobile_field)).getText().toString();
 
-        String MODIFY_URL = ("http://dheerajprojects.gear.host/web_server.php?modify=''&username='" + Uri.encode(Username) + "'&mpass=\"" + pass + "\"&mname='" + Uri.encode(name) + "'&mblood='" + Uri.encode(blood_t) + "'&mloc='" + Uri.encode(location) + "'&mmobilenumber='" + Uri.encode(mob_number) +"'&maller='" + Uri.encode(allergies) + "'");
+        String MODIFY_URL = ("http://dheerajprojects.gear.host/web_server.php?modify=''&username='" + Uri.encode(Username) + "'&mpass=\"" + pass + "\"&mname='" + Uri.encode(name) + "'&mblood='" + Uri.encode(blood_t) + "'&mloc='" + Uri.encode(location) + "'&mmobilenumber='" + Uri.encode(mob_number) + "'&maller='" + Uri.encode(allergies) + "'");
 
         //Contact the server to modify the data from the server
         StringRequest stringRequest = new StringRequest(Request.Method.GET, MODIFY_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                     }
                 });
 

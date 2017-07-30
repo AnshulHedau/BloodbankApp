@@ -3,28 +3,16 @@
     <item android:state_pressed="false">
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-            <corners
-                android:radius="500dp" />
+            <corners android:radius="500dp" />
 
-            <gradient
-                android:angle="90"
-                android:startColor="#def4854a"
-                android:endColor="#c6eeefef"
-                android:type="linear"
-                android:gradientRadius="80dp"/>
+            <gradient android:angle="90" android:endColor="#c6eeefef" android:gradientRadius="80dp" android:startColor="#def4854a" android:type="linear" />
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-            <corners
-                android:radius="5dp" />
-            <gradient
-                android:angle="90"
-                android:startColor="#f95a04"
-                android:endColor="#eeefef"
-                android:type="linear"
-                android:gradientRadius="80dp"/>
+            <corners android:radius="5dp" />
+            <gradient android:angle="90" android:endColor="#eeefef" android:gradientRadius="80dp" android:startColor="#f95a04" android:type="linear" />
 
         </shape>
     </item>

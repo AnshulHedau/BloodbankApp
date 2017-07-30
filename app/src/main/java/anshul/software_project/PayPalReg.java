@@ -20,12 +20,10 @@ public class PayPalReg extends AppCompatActivity {
 
     TextView tvResponse;
 
-    PayPalConfiguration pcConfiguration ;
+    PayPalConfiguration pcConfiguration;
     String paypalClientId = "AfAtkWltfT66EFYY6-UXiUak5nfWgK_dEjVyPTQ0-dswUMHkh-yYPyzwX02YzdxHa6NCXm5II9o4CGkz";
     Intent service;
     int paypalRequestCode = 999;
-
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,48 +38,36 @@ public class PayPalReg extends AppCompatActivity {
                 .clientId(paypalClientId);
 
         service = new Intent(getBaseContext(), PayPalService.class);
-
-        service.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,pcConfiguration);
-
-
+        service.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, pcConfiguration);
         startService(service);
-
-
     }
 
 
-
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == paypalRequestCode)
-        {
-            if(resultCode == Activity.RESULT_OK)
-            {
+        if (requestCode == paypalRequestCode) {
+            if (resultCode == Activity.RESULT_OK) {
                 PaymentConfirmation confirm = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-                if(confirm != null)
-                {
+                if (confirm != null) {
                     String state = confirm.getProofOfPayment().getState();
-
-                    if(state.equals("approved"))
+                    if (state.equals("approved"))
                         tvResponse.setText("payment approved");
                     else
                         tvResponse.setText("error in payment");
-                }
-                else
+                } else
                     tvResponse.setText("Confirmation is null");
             }
         }
     }
 
     public void pay(View view) {
-        PayPalPayment payment = new PayPalPayment(new BigDecimal(10),"USD","Test paypal",PayPalPayment.PAYMENT_INTENT_SALE);
+        PayPalPayment payment = new PayPalPayment(new BigDecimal(10), "USD", "Test paypal", PayPalPayment.PAYMENT_INTENT_SALE);
         Intent intent = new Intent(getBaseContext(), PaymentActivity.class);
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,pcConfiguration);
-        intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payment);
-        startActivityForResult(intent,paypalRequestCode);
+        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, pcConfiguration);
+        intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payment);
+        startActivityForResult(intent, paypalRequestCode);
     }
 }
 
