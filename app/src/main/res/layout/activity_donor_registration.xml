@@ -198,14 +198,14 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/signup_btn_bg"
-                android:elevation="0dp"
-                android:textSize="22sp"
-                android:onClick="openHome"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                android:text="REGISTER" />
+                android:layout_marginTop="16dp"
+                android:background="@drawable/signup_btn_bg"
+                android:elevation="0dp"
+                android:onClick="openHome"
+                android:text="REGISTER"
+                android:textSize="22sp" />
 
         </LinearLayout>
 

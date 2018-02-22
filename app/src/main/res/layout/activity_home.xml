@@ -25,12 +25,12 @@
         style="@style/Animation.Design.BottomSheetDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipChildren="false"
-        android:textColorHint="?android:attr/editTextColor"
-        android:background="@drawable/bg_edittext"
-        android:drawableLeft="@drawable/ic_settings"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:paddingLeft="10dp">
+        android:background="@drawable/bg_edittext"
+        android:clipChildren="false"
+        android:drawableLeft="@drawable/ic_settings"
+        android:paddingLeft="10dp"
+        android:textColorHint="?android:attr/editTextColor">
 
         <EditText
             android:id="@+id/username_field"
@@ -49,12 +49,12 @@
         style="@style/Animation.Design.BottomSheetDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipChildren="false"
-        android:textColorHint="?android:attr/editTextColor"
-        android:background="@drawable/bg_edittext"
-        android:drawableLeft="@drawable/ic_settings"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:paddingLeft="10dp">
+        android:background="@drawable/bg_edittext"
+        android:clipChildren="false"
+        android:drawableLeft="@drawable/ic_settings"
+        android:paddingLeft="10dp"
+        android:textColorHint="?android:attr/editTextColor">
 
 
         <EditText
@@ -77,14 +77,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password_field"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="0.08"
         android:background="@drawable/login_btn_bg"
+        android:onClick="openDonorList"
         android:text="        LOGIN        "
-        android:textSize="22sp"
-        android:onClick="openDonorList"/>
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/user_button"
@@ -92,15 +92,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/signup_btn_bg"
         android:elevation="0dp"
-        android:text="Sign Up"
-        android:textSize="22sp"
         android:onClick="openCreateList"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"/>
+        android:text="Sign Up"
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/button4"

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomList extends ArrayAdapter<String>{
+public class CustomList extends ArrayAdapter<String> {
 
     private final Activity context;
     private final ArrayList<String> nameId;
@@ -28,7 +28,7 @@ public class CustomList extends ArrayAdapter<String>{
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView= inflater.inflate(R.layout.activity_custom_list, null, true);
+        View rowView = inflater.inflate(R.layout.activity_custom_list, null, true);
         TextView nameView = (TextView) rowView.findViewById(R.id.main_name);
         TextView locationView = (TextView) rowView.findViewById(R.id.location);
         TextView numberView = (TextView) rowView.findViewById(R.id.mob_number);

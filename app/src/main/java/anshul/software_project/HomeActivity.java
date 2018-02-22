@@ -92,6 +92,11 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void openDonerList(View view) {
+        Intent i = new Intent(this, DonorList.class);
+        startActivity(i);
+    }
+
     public void openAboutus(View view) {
         Intent i = new Intent(this, AboutUs.class);
         startActivity(i);

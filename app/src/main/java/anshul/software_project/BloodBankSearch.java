@@ -1,7 +1,7 @@
 package anshul.software_project;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class BloodBankSearch extends AppCompatActivity {
 

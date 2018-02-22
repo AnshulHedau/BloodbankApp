@@ -1,20 +1,11 @@
 package anshul.software_project;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 public class BloodBankRegistration extends AppCompatActivity {
 
@@ -44,7 +35,7 @@ public class BloodBankRegistration extends AppCompatActivity {
         EditText loc_value = (EditText) findViewById(R.id.editText11);
         submit = (Button) findViewById(R.id.submit_button);
 
-        home_page = new Intent(this,HomeActivity.class);
+        home_page = new Intent(this, HomeActivity.class);
 
         //The URL to which GET request is sent
 //        String REGISTER_URL = ("http://dheerajprojects.gear.host/web_server.php?type='insert'&username='" + uname_value.getText().toString() + "'&password='" + pass_value.getText().toString() + "'&name='" + name_value.getText().toString() + "'&bloodtype='" + Uri.encode(blood_type) + "'&location='" + loc_value.getText().toString() + "'&allergies='" + aller_value.getText().toString() + "'");
@@ -79,6 +70,6 @@ public class BloodBankRegistration extends AppCompatActivity {
 //            //Disable the button until further activity
 //            submit.setEnabled(false);
 
-        }
+    }
 }
 

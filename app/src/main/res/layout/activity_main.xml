@@ -15,23 +15,23 @@
     app:layout_collapseParallaxMultiplier="1.0"
     tools:context="anshul.software_project.MainActivity">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="@android:dimen/thumbnail_height"
-            android:layout_height="@android:dimen/thumbnail_height"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/blood_bank"
-            app:srcCompat="@drawable/loading_animation" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@android:dimen/thumbnail_height"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/blood_bank"
+        app:srcCompat="@drawable/loading_animation" />
 
-        <TextView
-            android:layout_below="@id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="BLOOD BANK"
-            android:textSize="30sp"
-            android:layout_centerInParent="true"
-            android:textStyle="bold"
-            android:textColor="@android:color/holo_red_dark"/>
-        
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView3"
+        android:layout_centerInParent="true"
+        android:text="BLOOD BANK"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

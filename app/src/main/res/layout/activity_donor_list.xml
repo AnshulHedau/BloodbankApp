@@ -18,39 +18,39 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:text="Doner Search"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:textStyle="bold" />
 
 
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:weightSum="1">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="1">-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/textView5"-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
-            <!--android:text="Hello"-->
-            <!--android:textAlignment="textEnd"-->
-            <!--android:textColor="@color/colorAccent"-->
-            <!--android:textSize="20dp"-->
-            <!--android:layout_weight="0.83" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/textView5"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+    <!--android:text="Hello"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--android:textColor="@color/colorAccent"-->
+    <!--android:textSize="20dp"-->
+    <!--android:layout_weight="0.83" />-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/usernamedisplay"-->
-            <!--android:layout_width="199dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Username"-->
-            <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
-            <!--android:textColor="@color/colorAccent"-->
-            <!--android:textSize="20dp"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/usernamedisplay"-->
+    <!--android:layout_width="199dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Username"-->
+    <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+    <!--android:textColor="@color/colorAccent"-->
+    <!--android:textSize="20dp"/>-->
 
     <!--</LinearLayout>-->
 

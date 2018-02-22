@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_edit_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,8 +19,8 @@
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
             xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -48,8 +48,8 @@
                     android:id="@+id/uname_field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"
-                    android:layout_marginTop="20sp" />
+                    android:layout_marginTop="20sp"
+                    android:hint="Username" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -63,8 +63,8 @@
                     android:id="@+id/pass_field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
-                    android:layout_marginTop="20sp" />
+                    android:layout_marginTop="20sp"
+                    android:hint="Password" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -79,8 +79,8 @@
                     android:id="@+id/name_field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
-                    android:layout_marginTop="20sp" />
+                    android:layout_marginTop="20sp"
+                    android:hint="Name" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -95,8 +95,8 @@
                     android:id="@+id/bloodtype_field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Blood Group"
-                    android:layout_marginTop="20sp" />
+                    android:layout_marginTop="20sp"
+                    android:hint="Blood Group" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -111,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
-                    android:hint="Location"/>
+                    android:hint="Location" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -142,17 +142,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="20sp"
-                    android:hint="Allergy (If Any)"/>
+                    android:hint="Allergy (If Any)" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/signup_btn_bg"
-                android:layout_marginRight="60dp"
                 android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/signup_btn_bg"
                 android:onClick="ModifyDetails"
                 android:text="SAVE DETAILS" />
         </LinearLayout>

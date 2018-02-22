@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
+    android:orientation="vertical"
     android:weightSum="1"
     tools:context="anshul.software_project.PayPalReg">
 
@@ -13,7 +13,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="158dp"
-        android:src="@drawable/pp"/>
+        android:src="@drawable/pp" />
 
     <TextView
         android:id="@+id/textView"
@@ -23,7 +23,7 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:textColorLink="@color/colorPrimary"
-        android:textSize="16dp"/>
+        android:textSize="16dp" />
 
     <Button
         android:id="@+id/order"
@@ -33,13 +33,13 @@
         android:layout_marginRight="@android:dimen/notification_large_icon_width"
         android:layout_marginTop="@android:dimen/thumbnail_width"
         android:onClick="pay"
-        android:text="Pay $ 10"/>
+        android:text="Pay $ 10" />
 
     <TextView
         android:id="@+id/respose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:textSize="30dp"/>
+        android:textSize="30dp" />
 
 </LinearLayout>
